@@ -1,10 +1,12 @@
 import React from "react";
+import AlignmentDropdownMenu from "./alignment-dropdown-menu";
+import TurnIntoDropdownMenu from "./turn-into-dropdown-menu";
+
 import { BoldPlugin, ItalicPlugin, StrikethroughPlugin, UnderlinePlugin } from "@udecode/plate-basic-marks/react";
 import { BoldIcon, ItalicIcon, StrikethroughIcon, UnderlineIcon } from "lucide-react";
 import { MarkToolbarButton } from "./toolbar-buttons";
-import TurnIntoDropdownMenu from "./turn-into-dropdown-menu";
-import AlignmentDropdownMenu from "./alignment-dropdown-menu";
 import { IndentButton, OutdentButton } from "./indent-outdent-buttons";
+import { EmojiDropdownMenu } from "./emoji-picker/emoji-dropdown-menu";
 
 export default function Toolbar() {
   return (
@@ -25,6 +27,7 @@ export default function Toolbar() {
       <AlignmentDropdownMenu />
       <IndentButton />
       <OutdentButton />
+      <EmojiDropdownMenu label="Emoji" />
     </div>
   );
 }

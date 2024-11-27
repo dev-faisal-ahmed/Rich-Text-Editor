@@ -10,8 +10,10 @@ import { ParagraphPlugin } from "@udecode/plate-common/react";
 import { HEADING_LEVELS } from "@udecode/plate-heading";
 import { AlignPlugin } from "@udecode/plate-alignment/react";
 import { TodoLi, TodoMarker } from "../../plate-ui/indent-todo-marker";
+import { EmojiPlugin } from "@udecode/plate-emoji/react";
 
-const basicNodesPlugins = [HeadingPlugin.configure({ options: { levels: 3 } }), BlockquotePlugin, BasicMarksPlugin] as const;
+const basicNodesPlugins = [HeadingPlugin.configure({ options: { levels: 3 } }), BlockquotePlugin, BasicMarksPlugin];
+const markDownPlugin = MarkdownPlugin.configure({ options: { indentList: true } });
 
 const indentListPlugin = [
   IndentPlugin.extend({
@@ -29,4 +31,4 @@ const alignPlugin = AlignPlugin.extend({
 
 const viewPlugins = [...basicNodesPlugins, ...indentListPlugin, alignPlugin];
 
-export const editorPlugins = [...viewPlugins, MarkdownPlugin.configure({ options: { indentList: true } })];
+export const editorPlugins = [...viewPlugins, markDownPlugin, EmojiPlugin];
