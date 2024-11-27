@@ -9,6 +9,7 @@ import { IndentListPlugin } from "@udecode/plate-indent-list/react";
 import { ParagraphPlugin } from "@udecode/plate-common/react";
 import { HEADING_LEVELS } from "@udecode/plate-heading";
 import { AlignPlugin } from "@udecode/plate-alignment/react";
+import { TodoLi, TodoMarker } from "../../plate-ui/indent-todo-marker";
 
 const basicNodesPlugins = [HeadingPlugin.configure({ options: { levels: 3 } }), BlockquotePlugin, BasicMarksPlugin] as const;
 
@@ -18,6 +19,7 @@ const indentListPlugin = [
   }),
   IndentListPlugin.extend({
     inject: { targetPlugins: [ParagraphPlugin.key, ...HEADING_LEVELS, BlockquotePlugin.key] },
+    options: { listStyleTypes: { todo: { liComponent: TodoLi, markerComponent: TodoMarker, type: "todo" } } },
   }),
 ];
 

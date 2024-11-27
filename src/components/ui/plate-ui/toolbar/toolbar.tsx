@@ -4,6 +4,7 @@ import { BoldIcon, ItalicIcon, StrikethroughIcon, UnderlineIcon } from "lucide-r
 import { MarkToolbarButton } from "./toolbar-buttons";
 import TurnIntoDropdownMenu from "./turn-into-dropdown-menu";
 import AlignmentDropdownMenu from "./alignment-dropdown-menu";
+import { IndentButton, OutdentButton } from "./indent-outdent-buttons";
 
 export default function Toolbar() {
   return (
@@ -22,6 +23,8 @@ export default function Toolbar() {
       </MarkToolbarButton>
       <TurnIntoDropdownMenu />
       <AlignmentDropdownMenu />
+      <IndentButton />
+      <OutdentButton />
     </div>
   );
 }

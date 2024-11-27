@@ -2,11 +2,11 @@
 
 import { getBlockType, setBlockType } from "../../editor/transform";
 import { HEADING_KEYS } from "@udecode/plate-heading";
-import { ListStyleType } from "@udecode/plate-indent-list";
+import { INDENT_LIST_KEYS, ListStyleType } from "@udecode/plate-indent-list";
 import { BlockquotePlugin } from "@udecode/plate-block-quote/react";
 import { TElement } from "@udecode/plate-common";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuRadioGroup, DropdownMenuRadioItem, DropdownMenuTrigger } from "../../dropdown-menu";
-import { ChevronDownIcon, Heading1Icon, Heading2Icon, Heading3Icon, ListIcon, ListOrderedIcon, PilcrowIcon, QuoteIcon } from "lucide-react";
+import { ChevronDownIcon, Heading1Icon, Heading2Icon, Heading3Icon, ListIcon, ListOrderedIcon, ListTodoIcon, PilcrowIcon, QuoteIcon } from "lucide-react";
 import { ParagraphPlugin, useEditorRef, useSelectionFragmentProp, focusEditor } from "@udecode/plate-common/react";
 import { useMemo, useState } from "react";
 import { ToolbarButton } from "./toolbar-buttons";
@@ -18,6 +18,7 @@ const turnIntoItems = [
   { icon: <Heading3Icon size={16} />, keywords: ["subtitle", "h3"], label: "Heading 3", value: HEADING_KEYS.h3 },
   { icon: <ListIcon size={16} />, keywords: ["unordered", "ul", "-"], label: "Bulleted list", value: ListStyleType.Disc },
   { icon: <ListOrderedIcon size={16} />, keywords: ["ordered", "ol", "1"], label: "Numbered list", value: ListStyleType.Decimal },
+  { icon: <ListTodoIcon size={16} />, keywords: ["checklist", "task", "checkbox", "[]"], label: "To-do list", value: INDENT_LIST_KEYS.todo },
   { icon: <QuoteIcon size={16} />, keywords: ["citation", "blockquote", ">"], label: "Quote", value: BlockquotePlugin.key },
 ];
 
