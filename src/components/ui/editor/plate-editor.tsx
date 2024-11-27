@@ -4,7 +4,7 @@ import { Plate } from "@udecode/plate-common/react";
 import { useCreateEditor } from "@/components/ui/editor/use-create-editor";
 import { Editor, EditorContainer } from "@/components/ui/plate-ui/editor";
 import { ScrollArea } from "../scroll-area";
-import { Toolbar } from "../plate-ui/toolbar";
+import Toolbar from "../plate-ui/toolbar/toolbar";
 
 interface PlateEditorProps {
   className?: {
