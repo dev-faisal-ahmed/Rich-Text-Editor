@@ -3,6 +3,7 @@ import { BoldPlugin, ItalicPlugin, StrikethroughPlugin, UnderlinePlugin } from "
 import { BoldIcon, ItalicIcon, StrikethroughIcon, UnderlineIcon } from "lucide-react";
 import { MarkToolbarButton } from "./toolbar-buttons";
 import TurnIntoDropdownMenu from "./turn-into-dropdown-menu";
+import AlignmentDropdownMenu from "./alignment-dropdown-menu";
 
 export default function Toolbar() {
   return (
@@ -20,6 +21,7 @@ export default function Toolbar() {
         <StrikethroughIcon className="size-4" />
       </MarkToolbarButton>
       <TurnIntoDropdownMenu />
+      <AlignmentDropdownMenu />
     </div>
   );
 }

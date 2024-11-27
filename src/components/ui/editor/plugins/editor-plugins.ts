@@ -4,11 +4,11 @@ import { BasicMarksPlugin } from "@udecode/plate-basic-marks/react";
 import { BlockquotePlugin } from "@udecode/plate-block-quote/react";
 import { HeadingPlugin } from "@udecode/plate-heading/react";
 import { MarkdownPlugin } from "@udecode/plate-markdown";
-import { blockSelectionPlugins } from "./block-selection-plugin";
 import { IndentPlugin } from "@udecode/plate-indent/react";
 import { IndentListPlugin } from "@udecode/plate-indent-list/react";
 import { ParagraphPlugin } from "@udecode/plate-common/react";
 import { HEADING_LEVELS } from "@udecode/plate-heading";
+import { AlignPlugin } from "@udecode/plate-alignment/react";
 
 const basicNodesPlugins = [HeadingPlugin.configure({ options: { levels: 3 } }), BlockquotePlugin, BasicMarksPlugin] as const;
 
@@ -21,5 +21,10 @@ const indentListPlugin = [
   }),
 ];
 
-const viewPlugins = [...basicNodesPlugins, ...blockSelectionPlugins, ...indentListPlugin];
+const alignPlugin = AlignPlugin.extend({
+  inject: { targetPlugins: [ParagraphPlugin.key, ...HEADING_LEVELS] },
+});
+
+const viewPlugins = [...basicNodesPlugins, ...indentListPlugin, alignPlugin];
+
 export const editorPlugins = [...viewPlugins, MarkdownPlugin.configure({ options: { indentList: true } })];

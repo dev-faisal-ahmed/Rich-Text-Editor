@@ -13,6 +13,7 @@
     "@radix-ui/react-scroll-area": "^1.2.1",
     "@radix-ui/react-tooltip": "^1.1.4",
     "@udecode/cn": "^39.0.0",
+    "@udecode/plate-alignment": "^40.0.0",
     "@udecode/plate-basic-elements": "^40.2.6",
     "@udecode/plate-basic-marks": "^40.0.0",
     "@udecode/plate-block-quote": "^40.0.0",

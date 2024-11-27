@@ -1,3 +1,5 @@
+"use client";
+
 import { getBlockType, setBlockType } from "../../editor/transform";
 import { HEADING_KEYS } from "@udecode/plate-heading";
 import { ListStyleType } from "@udecode/plate-indent-list";
