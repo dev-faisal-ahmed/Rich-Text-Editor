@@ -7,6 +7,8 @@ import { editorPlugins } from "./plugins/editor-plugins";
 import { BlockquotePlugin } from "@udecode/plate-block-quote/react";
 import { PlateElement } from "../plate-ui/plate-element";
 import { HEADING_KEYS } from "@udecode/plate-heading";
+import { ImagePlugin } from "@udecode/plate-media/react";
+import { ImageElement } from "../plate-ui/image-element";
 
 export const useCreateEditor = () => {
   return usePlateEditor({
@@ -21,6 +23,7 @@ export const useCreateEditor = () => {
         [HEADING_KEYS.h1]: withProps(PlateElement, { as: "h1", className: "mt-3 pb-1 font-heading text-4xl font-bold" }),
         [HEADING_KEYS.h2]: withProps(PlateElement, { as: "h2", className: "mt-2 pb-px font-heading text-2xl font-semibold tracking-tight" }),
         [HEADING_KEYS.h3]: withProps(PlateElement, { as: "h3", className: "mt-2 pb-px font-heading text-xl font-semibold tracking-tight" }),
+        [ImagePlugin.key]: ImageElement,
       },
     },
     plugins: [...editorPlugins],

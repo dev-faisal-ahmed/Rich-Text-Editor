@@ -2,9 +2,8 @@ import { PlateEditor } from "@/components/ui/editor/plate-editor";
 
 export default function HomePage() {
   return (
-    <main className="p-6 grid grid-rows-[1fr_auto] min-h-screen">
-      <div />
-      <PlateEditor />
+    <main className="grid min-h-screen">
+      <PlateEditor className={{ scrollArea: "max-h-full", editorContainer: "mt-auto h-fit max-h-screen" }} />
     </main>
   );
 }

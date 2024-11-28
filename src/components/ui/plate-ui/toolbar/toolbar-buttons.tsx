@@ -6,11 +6,11 @@ import { withRef } from "@udecode/cn";
 import { useMarkToolbarButton, useMarkToolbarButtonState } from "@udecode/plate-common/react";
 
 // *********** Toolbar Button *********** \\
-const toolbarVariants = cva("flex items-center justify-center bg-gray-100 font-semibold rounded-md", {
+const toolbarVariants = cva("flex items-center justify-center rounded-md bg-gray-100 font-semibold", {
   variants: {
     variant: {
       default: "size-6",
-      dropdown: "justify-between gap-2 p-2 h-6",
+      dropdown: "h-6 justify-between gap-2 p-2",
     },
   },
 });

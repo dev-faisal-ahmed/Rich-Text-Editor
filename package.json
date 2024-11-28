@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@radix-ui/react-alert-dialog": "^1.1.2",
     "@radix-ui/react-checkbox": "^1.1.2",
     "@radix-ui/react-dropdown-menu": "^2.1.2",
     "@radix-ui/react-popover": "^1.1.2",
@@ -20,12 +21,15 @@
     "@udecode/plate-basic-elements": "^40.2.6",
     "@udecode/plate-basic-marks": "^40.0.0",
     "@udecode/plate-block-quote": "^40.0.0",
+    "@udecode/plate-break": "^40.0.0",
     "@udecode/plate-common": "^40.0.3",
     "@udecode/plate-emoji": "^40.0.0",
     "@udecode/plate-heading": "^40.2.6",
     "@udecode/plate-indent": "^40.0.0",
     "@udecode/plate-indent-list": "^40.0.0",
     "@udecode/plate-markdown": "^40.2.2",
+    "@udecode/plate-media": "^40.2.7",
+    "@udecode/plate-resizable": "^40.0.0",
     "@udecode/plate-selection": "^40.1.0",
     "@udecode/plate-trailing-block": "^40.0.0",
     "class-variance-authority": "^0.7.0",
@@ -41,7 +45,8 @@
     "slate-react": "^0.111.0",
     "tailwind-merge": "^2.5.5",
     "tailwind-scrollbar-hide": "^1.1.7",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "use-file-picker": "^2.1.2"
   },
   "devDependencies": {
     "@types/node": "^20",
@@ -50,6 +55,7 @@
     "eslint": "^8",
     "eslint-config-next": "14.2.10",
     "postcss": "^8",
+    "prettier-plugin-tailwindcss": "^0.6.9",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"
   }

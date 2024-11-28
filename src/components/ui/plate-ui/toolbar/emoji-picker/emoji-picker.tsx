@@ -72,7 +72,7 @@ export function EmojiPickerNavigation({ emojiLibrary, focusedCategory, i18n, ico
                     variant="ghost"
                     className={cn(
                       "h-fit rounded-full fill-current p-1.5 text-muted-foreground hover:bg-muted hover:text-muted-foreground",
-                      id === focusedCategory && "pointer-events-none bg-accent fill-current text-accent-foreground"
+                      id === focusedCategory && "pointer-events-none bg-accent fill-current text-accent-foreground",
                     )}
                     onClick={() => {
                       onClick(id);
@@ -157,7 +157,7 @@ export function EmojiPickerSearchAndClear({ clearSearch, i18n, searchValue }: Em
           size="icon"
           variant="ghost"
           className={cn(
-            "absolute right-0.5 top-1/2 flex size-8 -translate-y-1/2 cursor-pointer items-center justify-center rounded-full border-none bg-transparent text-popover-foreground hover:bg-transparent"
+            "absolute right-0.5 top-1/2 flex size-8 -translate-y-1/2 cursor-pointer items-center justify-center rounded-full border-none bg-transparent text-popover-foreground hover:bg-transparent",
           )}
           onClick={clearSearch}
           title={i18n.clear}

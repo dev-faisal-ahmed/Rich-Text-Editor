@@ -39,7 +39,7 @@ export default function TurnIntoDropdownMenu() {
   return (
     <DropdownMenu open={isOpen} onOpenChange={setIsOpen}>
       <DropdownMenuTrigger asChild>
-        <ToolbarButton variant="dropdown" className="text-sm pr-1" isActive={isOpen} label="Turn Into">
+        <ToolbarButton variant="dropdown" className="pr-1 text-sm" isActive={isOpen} label="Turn Into">
           {selectedItem.label} <ChevronDownIcon size={16} />
         </ToolbarButton>
       </DropdownMenuTrigger>
@@ -52,7 +52,7 @@ export default function TurnIntoDropdownMenu() {
           }}
         >
           {turnIntoItems.map(({ icon, label, value }) => (
-            <DropdownMenuRadioItem key={value} className="min-w-40 flex items-center gap-2" value={value}>
+            <DropdownMenuRadioItem key={value} className="flex min-w-40 items-center gap-2" value={value}>
               {icon} {label}
             </DropdownMenuRadioItem>
           ))}

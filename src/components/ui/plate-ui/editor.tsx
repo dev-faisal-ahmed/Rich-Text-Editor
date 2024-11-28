@@ -19,7 +19,7 @@ const editorContainerVariants = cva(
         demo: "h-[650px]",
       },
     },
-  }
+  },
 );
 
 export const EditorContainer = ({ className, variant, ...props }: React.HTMLAttributes<HTMLDivElement> & VariantProps<typeof editorContainerVariants>) => {
@@ -38,7 +38,7 @@ const editorVariants = cva(
     "ring-offset-background placeholder:text-muted-foreground/80 focus-visible:outline-none",
     "[&_[data-slate-placeholder]]:text-muted-foreground/80 [&_[data-slate-placeholder]]:!opacity-100",
     "[&_[data-slate-placeholder]]:top-[auto_!important]",
-    "[&_strong]:font-bold"
+    "[&_strong]:font-bold",
   ),
   {
     defaultVariants: {
@@ -52,10 +52,10 @@ const editorVariants = cva(
         true: "ring-2 ring-ring ring-offset-2",
       },
       variant: {
-        default: "w-full h-full p-6 text-base",
+        default: "h-full w-full p-6 text-base",
       },
     },
-  }
+  },
 );
 
 export type EditorProps = PlateContentProps & VariantProps<typeof editorVariants>;
@@ -70,7 +70,7 @@ export const Editor = React.forwardRef<HTMLDivElement, EditorProps>(({ className
           focused,
           variant,
         }),
-        className
+        className,
       )}
       disabled={disabled}
       disableDefaultStyles

@@ -24,7 +24,7 @@ const insertList = (editor: PlateEditor, type: string) => {
       indent: 1,
       listStyleType: type,
     }),
-    { select: true }
+    { select: true },
   );
 };
 
@@ -63,7 +63,7 @@ const setList = (editor: PlateEditor, type: string, entry: TNodeEntry<TElement>)
     }),
     {
       at: entry[1],
-    }
+    },
   );
 };
 
